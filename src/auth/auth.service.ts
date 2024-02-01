@@ -59,19 +59,3 @@ export class AuthService {
         };
     }
 }
-
-
-
-//     if (!user) {
-//         throw new UnauthorizedException('Credenciales inválidas');
-//     }
-
-//     // Crear payload para el token
-//     const payload = { username: user.username, isAdmin: user.isAdmin };
-
-//     // Generar token
-//     const access_token = this.jwtService.sign(payload);
-
-//     // Devolver token
-//     return { access_token };
-// }
