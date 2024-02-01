@@ -60,5 +60,10 @@ update(): edita un usuario,  utiliza el dto "UpdateUserDto" que contiene los cam
 
 ## Decorator
 
-
 Roles: un decorador para definir roles, en este codigo hay dos tipos de roles "admin" y "owner". El tipo de usuario "owner" es un usuario basico no tiene permitido acceder a rutas administrativas.
+
+## Estrategias
+
+LocalStrategy: se importa la strategy de passport-local ya que el login es con info local y no con un servicio de tercero. Esta clase extiende de PassportStrategy y en el super del constructor se escribe el nombre de la key que se usa para iniciar sesion, en este caso sera "username". Esta estrategia llama al authService si todo esta bien devuelve el usuario.
+
+JwtStrategy: analiza el token y verifica el username y el rol para las solicitudes de ciertas rutas o las opciones de moderacion.
